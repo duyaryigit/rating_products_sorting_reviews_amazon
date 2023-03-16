@@ -1,6 +1,6 @@
 
 ###################################################
-# PROJE: Rating Product & Sorting Reviews in Amazon
+# PROJECT: Rating Product & Sorting Reviews in Amazon
 ###################################################
 
 ###################################################
@@ -124,14 +124,16 @@ time_based_weighted_average(df)
 
 df["helpful"].head()
 
-# 1.yol
+# 1st Solution
+
 df["helpful"]=df["helpful"].str.strip('[ ]')
 df["helpful_yes"]=df["helpful"].apply(lambda x:x.split(", ")[0]).astype(int)
 df["total_vote"]=df["helpful"].apply(lambda x:x.split(", ")[1]).astype(int)
 df["helpful_no"] = df["total_vote"] - df["helpful_yes"]
 df.head(50)
 
-# 2.yol
+# 2nd Solution
+
 df["helpful_yes"]=df[["helpful"]].applymap(lambda x:x.split(", ")[0].strip('[')).astype(int)
 df["total_vote"]=df[["helpful"]].applymap(lambda x:x.split(", ")[1].strip(']')).astype(int)
 
@@ -140,7 +142,7 @@ df["helpful_no"] = df["total_vote"] - df["helpful_yes"]
 df = df[["reviewerName", "overall", "summary", "helpful_yes", "helpful_no", "total_vote", "reviewTime"]]
 
 ###################################################
-# Adım 2. Calculate score_pos_neg_diff, score_average_rating and wilson_lower_bound scores and add to data
+# 2. Calculate score_pos_neg_diff, score_average_rating and wilson_lower_bound scores and add to data
 ###################################################
 
 df.head()
