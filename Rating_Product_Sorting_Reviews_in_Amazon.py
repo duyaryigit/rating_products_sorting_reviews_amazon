@@ -74,8 +74,8 @@ plt.show()
 # day_diff: How long has it been since the comment
 df['reviewTime'] = pd.to_datetime(df['reviewTime'], dayfirst=True)
 current_date = pd.to_datetime('2014-12-08 00:00:00')
-df["day_diff1"] = (current_date - df['reviewTime']).dt.days
-df["day_diff1"].describe()
+df["day_diff"] = (current_date - df['reviewTime']).dt.days
+df["day_diff"].describe()
 
 
 # Determination of time-based average weights
