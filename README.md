@@ -1,7 +1,7 @@
 # Rating Product & Sorting Reviews in Amazon
 
 <p align="center">
-  <img src="https://www.debutinfotech.com/uploads/main15198107851589354237.png" alt="Rating"/>
+  <img src="https://gozegoglobal.com/wp-content/uploads/2019/08/How-to-Get-Amazon-Reviews-the-Right-Way.png" alt="Rating"/>
 </p>
 
 ---
